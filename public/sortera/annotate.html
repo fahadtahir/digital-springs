@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+        
+        
+<html lang="en-GB" data-website-id="2" data-main-object="website.page(7,) xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+    
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+        <title>Sortera</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name='robots' content='max-image-preview:large' />
+
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Sortera"/>
+        <meta property="og:description" content="Annotate"/>
+        <meta property="og:url" content="https://digitalsprings.co.uk/sortera/annotate.html"/>
+        <meta property="og:site_name" content="Sortera"/>
+        <meta property="og:image" content="https://digitalsprings.co.uk/logo/logo_wtext.png?3"/>
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="500" />
+        <meta property="og:image:alt" content="" />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="fb:app_id" content="249643311490" />
+
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""/>
+        <link type="image/x-icon" rel="shortcut icon" href="logo/logo_big.png"/>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <link type="text/css" rel="stylesheet" href="../css/web.assets_frontend.min.css" data-asset-bundle="web.assets_frontend" data-asset-version="3dd6c4e"/>
+
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.7.10/dist/annotorious.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.7.10/dist/annotorious.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious-selector-pack@latest/dist/annotorious-selector-pack.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious-shape-labels@latest/dist/annotorious-shape-labels.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious-toolbar@latest/dist/annotorious-toolbar.min.js"></script>
+       
+        
+        <style>
+          g .a9s-shape-label {
+              border: 1px dotted black;
+              color: black !important;
+              background: grey;
+          }
+
+          g {color: red !important; font-weight: bold;}
+    
+          .row>* {
+            padding: 0;
+          }
+
+          .r6o-widget.comment.editable {
+            display: none;
+          }
+
+          body {
+            background-color: #30353b;
+            overflow: auto;
+          }
+          </style>
+    </head>
+
+    <body>
+
+    <main>
+                    
+    <div id="wrap">
+      <div class="oe_structure">
+        <section class="s_title parallax s_parallax_is_fixed bg-black-50 pt24 pb24" data-vcss="001" data-snippet="s_title" data-scroll-background-ratio="1">
+          <span class="s_parallax_bg oe_img_bg"></span>
+          <div class="o_we_bg_filter bg-black-50"></div>
+          <div class="container">
+            <h1>Sortera Annotate</h1>
+          </div>
+        </section>
+      </div>
+
+
+      <div class="oe_structure">
+        <section class="s_title parallax s_parallax_is_fixed bg-black-50 pt24" style="background-image: linear-gradient(204deg, #502323, transparent);" data-vcss="001" data-snippet="s_title" data-scroll-background-ratio="1">
+        <div class="container">
+
+          <div class="row align-items-center" style="width: min-content; padding: 0;">
+            <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="">
+            <div id="my-toolbar-container"></div>
+            <img src="../img/c2.jpg" id="my-image" style="width: 700px; border: 3px solid black">
+
+          </div>
+
+        </div>
+
+        <div class="container">
+          <div class="row align-items-center">
+            <input type="button" class="btn-lg" id="save" value="Save" onclick="save()" style="padding: 5px; margin: 5px;" >
+          </div>
+        </div>
+
+        </section>
+      </div>
+
+    </div>
+
+
+    <script>
+        var config = {
+          image: document.getElementById('my-image'),
+          formatter: Annotorious.ShapeLabelsFormatter(),
+          allowEmpty: true
+        };
+        var anno = Annotorious.init(config);
+        anno.removeDrawingTool('polygon');
+
+        Annotorious.SelectorPack(anno, {
+          tools: ['freehand', 'rect']
+        });
+        anno.setDrawingTool('rect');
+
+        Annotorious.Toolbar(anno, document.getElementById('my-toolbar-container'));
+
+        var loadFile = function(event) {
+          var image = document.getElementById('my-image');
+          image.src = URL.createObjectURL(event.target.files[0]);
+        };  
+
+        var save = function() {
+          html2canvas($("svg.a9s-annotationlayer.touch").parent()[0]).then(canvas => {
+            var link = document.createElement('a');
+            link.download = 'image-annotated.png';
+            link.href = canvas.toDataURL()
+            link.click(); 
+          });
+        };
+
+        $(document).ready(function(){
+          $(".a9s-toolbar-btn.freehand").removeClass("active");
+          $(".a9s-toolbar-btn.rect").addClass("active");
+        })
+      </script>
+
+
+
+    </main>
+      
+
+                <footer id="bottom" data-anchor="true" data-name="Footer" class="o_footer o_colored_level o_cc ">
+                    <div class="o_footer_copyright o_colored_level o_cc" data-name="Copyright">
+                      <div class="container py-3">
+                          <div class="row">
+                              <div class="col-sm text-center text-sm-start text-muted">
+                                  <span class="o_footer_copyright_name me-2">Copyright &copy; Digital Springs 2023</span>
+      
+      
+                              </div>
+      
+                            </div>
+                          </div>
+                        </div>
+                </footer>
+        </body>
+
+</html>

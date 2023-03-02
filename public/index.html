@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+        
+        
+<html lang="en-GB" data-website-id="2" data-main-object="website.page(7,) xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+    
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+        <title>Digital Springs</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name='robots' content='max-image-preview:large' />
+
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Digital Springs"/>
+        <meta property="og:description" content="Software Solutions For You"/>
+        <meta property="og:url" content="https://digitalsprings.co.uk"/>
+        <meta property="og:site_name" content="Digital Springs"/>
+        <meta property="og:image" content="https://digitalsprings.co.uk/logo/logo_wtext.png?3"/>
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="500" />
+        <meta property="og:image:alt" content="" />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="fb:app_id" content="249643311490" />
+        <meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />  
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="Digital Springs"/>
+        <meta name="twitter:image" content="logo/logo_wtext.png"/>
+        
+        <link rel="canonical" href="index.html"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""/>
+        <link type="image/x-icon" rel="shortcut icon" href="logo/logo_big.png"/>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+        <link type="text/css" rel="stylesheet" href="css/web.assets_frontend.min.css" />
+
+        
+        <script>
+
+
+          var test = function() {
+              $('.form-control').removeClass('is-invalid');
+
+              var leadName = document.getElementById('contact1').value;
+              var leadEmail = document.getElementById('contact2').value;
+              var leadMessage = document.getElementById('contact3').value;
+
+              var isValid = true;
+              if (!leadName) {
+                $('#contact1').addClass('is-invalid');
+                isValid = false;
+              }
+              if (!leadEmail)  {
+                $('#contact2').addClass('is-invalid');
+                isValid = false;
+              }
+
+              if (isValid) {
+
+                  $('#spinner').addClass("spinner-border");
+                  var data = JSON.stringify({'leadName':leadName, 'leadEmail':leadEmail, 'leadMessage':leadMessage});
+                  $.ajax({
+                    url: 'https://us-central1-digital-sec.cloudfunctions.net/save',
+                    contentType: 'application/x-www-form-urlencoded',
+                    method: 'POST',
+                    data: `data=${data}`,
+                    success: function(rest, textStatus) {
+                      $('#spinner').removeClass("spinner-border");
+                      $('#s_website_form_result').text("Message sent successfully !");
+
+                      $('#contact1').val('');
+                      $('#contact2').val('');
+                      $('#contact3').val('');
+                    }
+                  });
+              }
+    
+                return false;
+    
+              };
+    
+      </script>
+
+
+    </head>
+
+    <body>
+        <div id="wrapwrap" class="homepage">
+                <header id="top" data-anchor="true" data-name="Header" class="  o_header_standard">
+                    
+    <nav data-name="Navbar" class="navbar navbar-expand-lg navbar-light o_colored_level o_cc shadow-sm">
+                        
+    
+          <a href="index.html" class="navbar-brand logo me-4">
+            
+            <span role="img" aria-label="Logo of Digital Springs" title="Digital Springs"><img src="logo/logo_big.png" class="img img-fluid" width="95" height="40" alt="Digital Springs"/></span>
+            
+          </a>
+
+          <a href="index.html" class="navbar-brand logo me-4">
+            
+            <span loading="lazy" class="logo-text">Digital Springs</span>
+            
+          </a>
+    
+                
+    <div id="nav1" class="order-last order-lg-0 navbar" style="flex-grow: 0; margin-left:auto; margin-right: 0;">
+        
+        <ul id="standard" class="nav navbar-nav o_menu_loading">
+         
+                            
+          <li class="nav-item">
+              <a role="menuitem" href="index.html" class="nav-link active">
+                  <span>Home</span>
+              </a>
+          </li>
+          <li class="nav-item">
+            <a role="menuitem" href="services.html" class="nav-link ">
+                <span>Services</span>
+            </a>
+        </li>
+          <li class="nav-item">
+              <a role="menuitem" href="about-us.html" class="nav-link ">
+                  <span>About</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a role="menuitem" href="contact-us.html" class="nav-link ">
+                  <span>Contact Us</span>
+              </a>
+          </li>
+                            
+        </ul>
+    </div>
+
+
+
+    
+    <div id="nav2" >
+
+      <div class="dropdown">
+        <button class="btn btn-secondary fa fa-bars" type="button" style="background-color: #00c2cb !important" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end"   aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="index.html" style="color: #276e72 !important; font-weight: bold;">Home</a></li>
+          <li><a class="dropdown-item" href="services.html" style="color: #276e72 !important">Services</a></li>
+          <li><a class="dropdown-item" href="about-us.html" style="color: #276e72 !important">About</a></li>
+          <li><a class="dropdown-item" href="contact-us.html" style="color: #276e72 !important">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+        
+    </nav>
+    
+
+
+        </header>
+                <main>
+                    
+    <div id="wrap" class="oe_structure oe_empty">
+      
+      <section class="s_picture o_colored_level oe_img_bg o_bg_img_center fade-in" style="background-image: url(img/c2.jpg); background-position: center center; padding: 30px; height: 600px;" data-snippet="s_picture" data-name="Picture">
+        <div class="container">
+          <h1 style="text-align: center;">Software Without Any Hassle</h1>
+          <p style="text-align: center;">
+            <span >Confused about how to step into the digital world?</span>
+          </p>
+          <p style="text-align: center;">
+            <span>Say no more! We offer solutions for all your software and technology needs</span>
+          </p>
+          
+          <p style="text-align: center;" data-bs-original-title="" title="" aria-describedby="tooltip388407">
+            <a class="btn btn-primary mb-2 rounded-circle btn-lg" href="#contactForm" data-bs-original-title="" title="">Contact Us</a>
+          </p>
+        </div>
+      </section>
+
+
+
+      <section class="s_text_image pb32 o_colored_level"  style="background-image: none;" data-bs-original-title="" title="" aria-describedby="tooltip148565">
+        <div class="o_we_shape o_web_editor_Bold_01" ></div>
+        <div class="container">
+          <div class="row align-items-center" data-bs-original-title="" title="" aria-describedby="tooltip411722">
+            <div class="pt16 pb16 o_colored_level col-lg-6">&nbsp;<img src="img/iphone_3d_portrait_01.png" class="img img-fluid mx-auto" alt="" style="padding: 48px !important;" data-bs-original-title="" title="" aria-describedby="tooltip62244"/></div>
+            <div class="pb16 o_colored_level col-lg-6"  >&nbsp;
+              <h1>A solution for<br/>every need</h1><p><br/></p><p><span style="font-size: 24px;">We see our role as that of a technological partner responsible for constantly finding practical and pragmatic solutions that are adapted to our clients' needs.</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+  
+      <section class="s_text_image pt64 o_colored_level" data-snippet="s_text_image" data-name="Text - Image" style="background-image: none; text-align: center;">
+        <div class="o_we_shape o_web_editor_Bold_02" ></div>
+        <div class="container" style="display: inline-block;">
+          <div class="row align-items-center">
+
+            <h1 style="text-align: left;">What we can do,&nbsp;<br><b style="font-weight: bolder">for you</b></h1>
+
+            <div class="row padded-row-border -items-center"  aria-describedby="tooltip411722">
+              
+              <div class="pb16 o_colored_level col-lg-6"  >&nbsp;
+                <h2>Digital Transformation</h2>
+                <p>Our goal is helping companies of all sizes to thrive in an ever-changing landscape by helping them establish an online presence<br><br>
+                We are committed to help your business acheive its maximum potential and will help you every step of the way
+                </p>              
+              </div>
+              <div class="pt16 pb16 o_colored_level col-lg-6">&nbsp;<img src="img/c5.jpg" class="img img-fluid mx-auto" style="border-radius: 5%;" data-bs-original-title="" title="" aria-describedby="tooltip62244"/></div>
+              
+              
+            </div>
+
+            <div class="row padded-row-border-2 align-items-center"   aria-describedby="tooltip411722">
+              
+              <div class="pt16 pb16 o_colored_level col-lg-6 img-web">&nbsp;<img src="img/test.jpg" class="img img-fluid mx-auto " style="border-radius: 5%;" data-bs-original-title="" title="" aria-describedby="tooltip62244"/></div>
+              
+              <div class="pb16 o_colored_level col-lg-6"  >&nbsp;
+                <h2>Website Design & Development</h2>
+                
+                <p>
+                  We offer a comprehensive range of web development services to help businesses establish and enhance their online presence.
+                  <br><br> Our experienced and skilled web developers are dedicated to delivering custom and user-friendly websites that not only look great, but also function seamlessly and provide a great user experience.
+
+                </p>
+
+              </div>
+
+              <div class="pt16 pb16 o_colored_level col-lg-6 img-mobile">&nbsp;<img src="img/test.jpg" class="img img-fluid mx-auto " style="border-radius: 5%;" data-bs-original-title="" title="" aria-describedby="tooltip62244"/></div>
+
+            </div>
+
+
+
+            <div class="row padded-row-border align-items-center"  aria-describedby="tooltip411722">
+              
+              <div class="pb16 o_colored_level col-lg-6"  >&nbsp;
+                <h2>Mobile App Development</h2>
+                <p>Native and cross-platform mobile app development. Whether it be to promote your brand, expand your business or just establish a strong mobile presence, we'll provide you with custom-built apps specifically suited to your needs</p>              
+              </div>
+              <div class="pt16 pb16 o_colored_level col-lg-6">&nbsp;<img src="img/mobile2.jpg" class="img img-fluid mx-auto" style="border-radius: 5%;" data-bs-original-title="" title="" aria-describedby="tooltip62244"/></div>
+            
+            </div>
+
+            <div class="row padded-row-border-2 align-items-center"  aria-describedby="tooltip411722">
+              
+
+              <div class="pt16 pb16 o_colored_level col-lg-6 img-web">&nbsp;<img src="img/c3.jpg" class="img img-fluid mx-auto" style="border-radius: 5%;" data-bs-original-title="" title="" aria-describedby="tooltip62244"/></div>
+            
+              <div class="pb16 o_colored_level col-lg-6"  >&nbsp;
+                <h2>Analytics & Business Consulting</h2>
+                <p>We provide custom built solutions for Analytics that will help you gain quick insights from your data and make informed decisions to improve your business.</p>              
+              </div>
+
+
+              <div class="pt16 pb16 o_colored_level col-lg-6 img-mobile">&nbsp;<img src="img/c3.jpg" class="img img-fluid mx-auto" style="border-radius: 5%;" data-bs-original-title="" title="" aria-describedby="tooltip62244"/></div>
+            
+              <a style="text-align: right; font-size: 25px; font-weight: bold;float: right;" href="services.html">See all services...</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      
+      <section class="s_title pb40 pt40 o_colored_level" data-vcss="001" data-snippet="s_title" data-name="Title" id="pricing">
+
+        <div class="container">
+
+
+          <h1 style="text-align: center;">Pricing to suit<br/> all sizes of business</h1>
+
+          
+        
+
+        <div class="row padded-row align-items-center"  aria-describedby="tooltip411722">
+
+          <div class="pb16 o_colored_level col-lg-6"  >&nbsp;
+            
+
+            <p>We stand out from the competition by offering very affordable prices and flexible solutions for uprising businesses.</p> <br><br>
+            <p>And with no hidden costs, you can be rest assured that you'll always be getting the best value for buck.</p>                
+          </div>
+
+          <div class="pt16 pb16 o_colored_level col-lg-6">&nbsp;<img src="img/price.jpg" class="img img-fluid mx-auto" style="border-radius: 5%;" data-bs-original-title="" title="" aria-describedby="tooltip62244"/></div>
+        
+
+
+        </div>
+
+
+      </div>
+
+      </section>
+
+
+
+
+
+      <section class="s_website_form pb40 pt40 o_colored_level oe_img_bg o_bg_img_center fade-in" data-vcss="001" data-snippet="s_website_form" id="contactForm" style="border-top: 1px solid black;">
+        <div class="o_we_shape o_web_editor_Bold_03" ></div>
+
+        <div class="container">
+
+          <h2 style="text-align: center;">
+            <u>Get in touch now for a <b> Free </b> Consultation ! </u>
+          </h2>
+
+            <form id="contactus_form" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-success-mode="redirect" data-success-page="/contactus-thank-you" data-pre-fill="true">
+                <div class="s_website_form_rows row s_col_no_bgcolor" style="padding-top: 40px; ">
+                    <div class="mb-0 py-2 col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact1">
+                                <span class="s_website_form_label_content">Name</span>
+                                <span class="s_website_form_mark">*</span>
+                            </label>
+                            <div class="col-sm">
+                                <input id="contact1" type="text" class="form-control s_website_form_input" name="name" required data-fill-with="name"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-0 py-2 col-12 s_website_form_field s_website_form_required" data-type="email" data-name="Field">
+                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact3">
+                                <span class="s_website_form_label_content">Email</span>
+                                <span class="s_website_form_mark">*</span>
+                            </label>
+                            <div class="col-sm">
+                                <input id="contact2" type="email" class="form-control s_website_form_input" name="email_from" required data-fill-with="email"/>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="mb-0 py-2 col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="text" data-name="Field">
+                        <div class="row s_col_no_resize s_col_no_bgcolor">
+                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="contact6">
+                                <span class="s_website_form_label_content">Message</span>
+                            </label>
+                            <div class="col-sm">
+                                <textarea id="contact3" class="form-control s_website_form_input" name="description" ></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-0 py-2 col-12 s_website_form_submit pt24" style="text-align:center" data-name="Submit Button">
+                        
+                        <a  onclick="test();" href="javascript:void(0);" role="button" class="btn btn-primary mb-2 rounded-circle btn-lg">Submit</a>
+                        <br><br>
+
+                        <div class="" id="spinner" role="status">
+                          <span id="s_website_form_result" style="color: green; font-size: 20px"></span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section> 
+
+      
+
+    </div>
+
+    <a href="https://api.whatsapp.com/send?phone=447787874978" class="float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
+    </main>
+                <footer id="bottom" data-anchor="true" data-name="Footer" class="o_footer o_colored_level o_cc ">
+                    <div id="footer" class="oe_structure oe_structure_solo">
+            <section class="s_text_block pt40 pb16" data-snippet="s_text_block" data-name="Text">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 pt24 pb24">
+                            <h5 class="mb-3">Useful Links</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="about-us.html">About</a></li>
+                                <li><a href="contact-us.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-5 pt24 pb24">
+                          <h5 class="mb-3">About us</h5>
+                          <p>We are a team of passionate and skilled people are dedicated to providing innovative and cutting-edge technology 
+                              solutions to help businesses streamline their operations and improve their overall performance.</p>
+                      </div>
+                      <div id="connect" class="col-lg-4 offset-lg-1 pt24 pb24">
+                          <h5 class="mb-3">Connect with us</h5>
+                          <ul class="list-unstyled" style="margin-bottom: 0;">
+                              <li><i class="fa fa-comment fa-fw me-2"></i><span><a href="#contactForm">Contact us</a></span></li>
+                              <li><i class="fa fa-envelope fa-fw me-2"></i><span><a href="mailto:info@digitalsprings.co.uk">info@digitalsprings.co.uk</a></span></li>
+                              <li><i class="fa fa-whatsapp fa-fw me-2"></i><span class="o_force_ltr"><a href="https://api.whatsapp.com/send?phone=447787874978">+44(0)7787874978</a></span></li>
+                            </ul>
+                            <div class="s_social_media text-start o_not_editable" data-snippet="s_social_media" data-name="Social Media" contenteditable="false">
+                                <h5 class="s_social_media_title d-none" contenteditable="true">Follow us</h5>
+
+                                <a href="https://www.linkedin.com/company/digital-springs/about/" class="s_social_media_linkedin" target="_blank">
+                                    <i class="fa fa-linkedin rounded-circle shadow-sm"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    <div class="o_footer_copyright o_colored_level o_cc" data-name="Copyright">
+                        <div class="container py-3">
+                            <div class="row">
+                                <div class="col-sm text-center text-sm-start text-muted">
+                                    <span class="o_footer_copyright_name me-2">Copyright &copy; Digital Springs 2023</span>
+        
+        
+                                </div>
+        
+    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        
+
+        </body>
+
+
+
+</html>

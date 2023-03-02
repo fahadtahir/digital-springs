@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+        
+        
+<html lang="en-GB" data-website-id="2" data-main-object="website.page(7,) xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+    
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+        <title>Digital Springs</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name='robots' content='max-image-preview:large' />
+
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Digital Springs - Contact Us"/>
+        <meta property="og:description" content="Software Solutions For You"/>
+        <meta property="og:url" content="https://digitalsprings.co.uk/contact-us.html"/>
+        <meta property="og:site_name" content="Digital Springs"/>
+        <meta property="og:image" content="https://digitalsprings.co.uk/logo/logo_wtext.png?3"/>
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="500" />
+        <meta property="og:image:alt" content="" />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="fb:app_id" content="249643311490" />
+        <meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />  
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="Digital Springs"/>
+        <meta name="twitter:image" content="logo/logo_wtext.png"/>
+        
+        <link rel="canonical" href="index.html"/>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""/>
+        <link type="image/x-icon" rel="shortcut icon" href="logo/logo_big.png"/>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+
+        <link type="text/css" rel="stylesheet" href="css/web.assets_frontend.min.css" data-asset-bundle="web.assets_frontend" data-asset-version="3dd6c4e"/>
+
+
+        <script>
+
+
+            var test = function() {
+                $('.form-control').removeClass('is-invalid');
+  
+                var leadName = document.getElementById('contact1').value;
+                var leadEmail = document.getElementById('contact2').value;
+                var leadMessage = document.getElementById('contact3').value;
+  
+                var isValid = true;
+                if (!leadName) {
+                  $('#contact1').addClass('is-invalid');
+                  isValid = false;
+                }
+                if (!leadEmail)  {
+                  $('#contact2').addClass('is-invalid');
+                  isValid = false;
+                }
+  
+                if (isValid) {
+  
+                    $('#spinner').addClass("spinner-border");
+                    var data = JSON.stringify({'leadName':leadName, 'leadEmail':leadEmail, 'leadMessage':leadMessage});
+                    $.ajax({
+                      url: 'https://us-central1-digital-sec.cloudfunctions.net/save',
+                      contentType: 'application/x-www-form-urlencoded',
+                      method: 'POST',
+                      data: `data=${data}`,
+                      success: function(rest, textStatus) {
+                        $('#spinner').removeClass("spinner-border");
+                        $('#s_website_form_result').text("Message sent successfully !");
+  
+                        $('#contact1').val('');
+                        $('#contact2').val('');
+                        $('#contact3').val('');
+                      }
+                    });
+                }
+      
+                  return false;
+      
+                };
+      
+        </script>
+
+    </head>
+
+    <body>
+        <div id="wrapwrap" class="homepage">
+                <header id="top" data-anchor="true" data-name="Header" class="  o_header_standard">
+                    
+                    <nav data-name="Navbar" class="navbar navbar-expand-lg navbar-light o_colored_level o_cc shadow-sm">
+                        
+    
+                        <a href="index.html" class="navbar-brand logo me-4">
+                          
+                          <span role="img" aria-label="Logo of Digital Springs" title="Digital Springs"><img src="logo/logo_big.png" class="img img-fluid" width="95" height="40" alt="Digital Springs"/></span>
+                          
+                        </a>
+              
+                        <a href="index.html" class="navbar-brand logo me-4">
+                          
+                          <span loading="lazy" class="logo-text">Digital Springs</span>
+                          
+                        </a>
+                  
+                              
+                  <div id="nav1" class="order-last order-lg-0 navbar" style="flex-grow: 0; margin-left:auto; margin-right: 0;">
+                      
+                      <ul id="standard" class="nav navbar-nav o_menu_loading">
+                       
+                                          
+                        <li class="nav-item">
+                            <a role="menuitem" href="index.html" class="nav-link ">
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a role="menuitem" href="services.html" class="nav-link ">
+                                <span>Services</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a role="menuitem" href="about-us.html" class="nav-link ">
+                                <span>About</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a role="menuitem" href="contact-us.html" class="nav-link active">
+                                <span>Contact Us</span>
+                            </a>
+                        </li>
+                                          
+                      </ul>
+                  </div>
+              
+              
+              
+                  
+                  <div id="nav2" >
+              
+                    <div class="dropdown">
+                        <button class="btn btn-secondary fa fa-bars" type="button" style="background-color: #00c2cb !important" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        </button>
+                      <ul class="dropdown-menu dropdown-menu-end"   aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="index.html" style="color: #276e72 !important;">Home</a></li>
+                        <li><a class="dropdown-item" href="services.html" style="color: #276e72 !important">Services</a></li>
+                        <li><a class="dropdown-item" href="about-us.html" style="color: #276e72 !important">About</a></li>
+                        <li><a class="dropdown-item" href="contact-us.html" style="color: #276e72 !important;font-weight: bold;">Contact Us</a></li>
+                      </ul>
+                    </div>
+              
+                  </div>
+                      
+                  </nav>
+    
+        </header>
+                <main>
+                    
+            <span class="hidden" data-for="contactus_form" data-values="{&#39;email_to&#39;: &#39;fahadtahir94@gmail.com&#39;, &#39;name&#39;: &#39;&#39;, &#39;phone&#39;: &#39;&#39;, &#39;email_from&#39;: &#39;&#39;, &#39;company&#39;: &#39;&#39;, &#39;subject&#39;: &#39;&#39;, &#39;contact_name&#39;: &#39;&#39;, &#39;partner_name&#39;: &#39;&#39;, &#39;description&#39;: &#39;&#39;}"></span>
+            <div id="wrap" class="oe_structure oe_empty">
+                <section class="s_title parallax s_parallax_is_fixed bg-black-50 pt24 pb24" data-vcss="001" data-snippet="s_title" data-scroll-background-ratio="1">
+                    <span class="s_parallax_bg oe_img_bg"></span>
+                    <div class="o_we_bg_filter bg-black-50"></div>
+                    <div class="container">
+                        <h1>Contact Us</h1>
+                    </div>
+                </section>
+                <section class="s_text_block pt40 pb40 o_colored_level " data-snippet="s_text_block">
+                    <div class="container s_allow_columns">
+                        <div class="row">
+                            <div class="col-lg-8 mt-4 mt-lg-0">
+                                <p>
+                                    We pride ourselves on our customer service.<br><br>
+                                    Contact us now and we'll back to you soon as possible!
+                                </p>
+
+                                <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+                                    <div class="container">
+                                        <form id="contactus_form" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-success-mode="redirect" data-success-page="/contactus-thank-you" data-pre-fill="true">
+                                            <div class="s_website_form_rows row s_col_no_bgcolor padded-row" style="padding-bottom: 0px;">
+                                                <div class="mb-0 py-2 col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="char" data-name="Field">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 150px" for="contact1">
+                                                            <span class="s_website_form_label_content">Name</span>
+                                <span class="s_website_form_mark">*</span>
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input id="contact1" type="text" class="form-control s_website_form_input" name="name" required="" data-fill-with="name"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="mb-0 py-2 col-12 s_website_form_field s_website_form_required" data-type="email" data-name="Field">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 150px" for="contact3">
+                                                            <span class="s_website_form_label_content">Email</span>
+                                                            <span class="s_website_form_mark">*</span>
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <input id="contact2" type="email" class="form-control s_website_form_input" name="email_from" required="" data-fill-with="email"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                            
+                            
+                                                <div class="mb-0 py-2 col-12 s_website_form_field s_website_form_custom s_website_form_required" data-type="text" data-name="Field">
+                                                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                                                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 150px" for="contact6">
+                                                            <span class="s_website_form_label_content">Message</span>
+                                                        </label>
+                                                        <div class="col-sm">
+                                                            <textarea id="contact3" class="form-control s_website_form_input" name="description" required=""></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                            
+                                                <div class="mb-0 py-2 col-12 s_website_form_submit pt24" style="text-align:center" data-name="Submit Button">
+                                                    
+                                                    <a  onclick="test();" href="javascript:void(0);" role="button" class="btn btn-primary mb-2 rounded-circle btn-lg">Submit</a>
+                                                    <br><br>
+
+                                                    <div class="" id="spinner" role="status">
+                                                        <span id="s_website_form_result" style="color: green; font-size: 20px"></span>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="col-lg-4 mt-4 mt-lg-0">
+                                <ul class="list-unstyled mb-0 ps-2" style="font-size: 20px">
+                                    <li><b>Digital Springs</b></li>
+                                    <li><i class="fa fa-map-marker fa-fw me-2"></i><span class="o_force_ltr">Swindon, UK</span></li>
+                                    <li><i class="fa fa-1x fa-fw fa-envelope me-2"></i><a href="mailto:info@digitalsprings.co.uk"><span>info@digitalsprings.co.uk</span></a></li>
+                                    <li><i class="fa fa-whatsapp fa-fw me-2"></i><span class="o_force_ltr"><a href="https://api.whatsapp.com/send?phone=447787874978">+44(0)7787874978</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+            <a href="https://api.whatsapp.com/send?phone=447787874978" class="float" target="_blank">
+                <i class="fa fa-whatsapp my-float"></i>
+              </a>
+        
+                </main>
+                <footer id="bottom" data-anchor="true" data-name="Footer" class="o_footer o_colored_level o_cc ">
+                    <div id="footer" class="oe_structure oe_structure_solo">
+            <section class="s_text_block pt40 pb16" data-snippet="s_text_block" data-name="Text">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 pt24 pb24">
+                            <h5 class="mb-3">Useful Links</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="about-us.html">About</a></li>
+                                <li><a href="contact-us.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-5 pt24 pb24">
+                            <h5 class="mb-3">About us</h5>
+                            <p>We are a team of passionate and skilled people are dedicated to providing innovative and cutting-edge technology 
+                                solutions to help businesses streamline their operations and improve their overall performance.</p>
+                        </div>
+                        <div id="connect" class="col-lg-4 offset-lg-1 pt24 pb24">
+                            <h5 class="mb-3">Connect with us</h5>
+                            <ul class="list-unstyled" style="margin-bottom: 0;">
+                                <li><i class="fa fa-comment fa-fw me-2"></i><span><a href="contact-us.html">Contact us</a></span></li>
+                                <li><i class="fa fa-envelope fa-fw me-2"></i><span><a href="mailto:info@digitalsprings.co.uk">info@digitalsprings.co.uk</a></span></li>
+                                <li><i class="fa fa-whatsapp fa-fw me-2"></i><span class="o_force_ltr"><a href="https://api.whatsapp.com/send?phone=447787874978">+44(0)7787874978</a></span></li>
+                            </ul>
+                            <div class="s_social_media text-start o_not_editable" data-snippet="s_social_media" data-name="Social Media" contenteditable="false">
+                                <h5 class="s_social_media_title d-none" contenteditable="true">Follow us</h5>
+  
+                                <a href="https://www.linkedin.com/company/digital-springs/about/" class="s_social_media_linkedin" target="_blank">
+                                    <i class="fa fa-linkedin rounded-circle shadow-sm"></i>
+                                </a>
+  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    <div class="o_footer_copyright o_colored_level o_cc" data-name="Copyright">
+                        <div class="container py-3">
+                            <div class="row">
+                                <div class="col-sm text-center text-sm-start text-muted">
+                                    <span class="o_footer_copyright_name me-2">Copyright &copy; Digital Springs 2023</span>
+        
+        
+                                </div>
+        
+    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        
+        </body>
+
+</html>
